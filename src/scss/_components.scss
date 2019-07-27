@@ -1,23 +1,44 @@
 .btn {
-  padding: 1rem 2rem;
+  display: inline-block;
+  margin-top: 2rem;
+  padding: .8rem 1.8rem;
   color: $font-color-dark;
   background: none;
   border: none;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
 
   &--white {
-    background: $bgc-color-white;
+    background: $bgc-color-light;
     color: $font-color-dark;
   }
 
   &--dark {
-    background: $bgc-color-blue;
+    background: $bgc-blue;
     color: $font-color-light;
   }
 }
 
 
-.box-frame {
-  border: 10px solid orange;
+.box {
+  padding: 2rem;
+
+  &--small {
+    flex-basis: 24%;
+  }
+
+  &--medium {
+    flex-basis: 48%;
+  }
+
+  &--big {
+    flex-basis: 76%;
+  }
+
+  &--frame {
+    @include flexCenter;
+    text-align: center;
+    border: 10px solid $border-color;
+  }
 }
