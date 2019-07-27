@@ -1,0 +1,30 @@
+.heading-primary {
+  color: $font-color-light;
+  font-size: 8rem;
+  font-weight: 300;
+  letter-spacing: .2rem;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  letter-spacing: .2rem;
+
+  &--light {
+    color: $font-color-light;
+  }
+
+  &--dark {
+    color: $font-color-dark;
+  }
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  // &--white {
+  //   color: $font-color-light;
+  // }
+
+  // &--dark {
+  //   color: $font-color-dark;
+  // }
+}

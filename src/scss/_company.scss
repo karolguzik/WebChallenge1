@@ -1,0 +1,16 @@
+.company {
+  background-color: $bgc-color-dark;
+  padding: 5rem 5rem;
+  height: 50vh;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  &__box {
+    flex-basis: 20%;
+  }
+
+  .paragraph {
+    color: $font-color-light;
+  }
+}
