@@ -2,10 +2,34 @@
   padding: $section-padding;
   color: $font-color-dark;
 
+  @media only screen and (max-width: 600px) {
+    padding: 2rem;
+  }
+
   &__gallery {
     @include contentSet;
     height: 100vh;
     flex-wrap: wrap;
+
+    @media only screen and (max-width: 900px) {
+      height: auto;
+      justify-content: center;
+
+      .box:nth-child(3) {
+        order: 1;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .box:not(:nth-child(3)) {
+        height: 30vh;
+        flex-basis: 80%;
+      }
+
+      .box:nth-child(3) {
+        flex-basis: 100%;
+      }
+    }
   }
 
   .heading-secondary {

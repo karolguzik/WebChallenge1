@@ -1,10 +1,45 @@
 .company {
+  width: 100%;
   background-color: $bgc-color-dark;
   padding: $section-padding;
   color: $font-color-light;
 
+  @media only screen and (max-width: 900px) {
+    padding: 2rem;
+
+    .box {
+      margin-top: 4rem;
+    }
+  }
+
   &-content {
     @include contentSet;
     height: $content-height;
+
+    @media only screen and (max-width: 900px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      height: auto;
+
+
+      .box {
+        height: 30vh;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      padding: 5rem 0;
+
+      .box {
+        flex-basis: 80%;
+        margin-top: 0;
+        height: auto;
+      }
+
+      .box:nth-child(1) {
+        height: 30vh;
+        flex-basis: 90%;
+      }
+    }
   }
 }

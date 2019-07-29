@@ -1,8 +1,21 @@
 .contact {
   padding: $section-padding;
 
+  @media only screen and (max-width: 700px) {
+    padding: 2rem;
+  }
+
   &-content {
     @include contentSet;
+
+    @media only screen and (max-width: 700px) {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .box {
+        flex-basis: 100%;
+      }
+    }
   }
 
   &-content-box {

@@ -2,13 +2,50 @@
   padding: $section-padding;
   color: $font-color-dark;
 
+  @media only screen and (max-width: 900px) {
+    padding: 3rem;
+  }
+
   &__gallery {
     @include contentSet;
     height: $content-height;
+
+    @media only screen and (max-width: 900px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      height: auto;
+
+      .box {
+        height: 40vh;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+
+      .box {
+        flex-basis: 80%;
+      }
+
+      .box:nth-child(4) {
+        height: 30vh;
+        flex-basis: 90%;
+      }
+    }
   }
 
   &__info {
     @include contentSet;
     margin: $margin-small auto;
+
+    @media only screen and (max-width: 900px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .box {
+        flex-basis: 90%;
+      }
+    }
   }
 }
