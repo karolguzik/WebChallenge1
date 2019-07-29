@@ -1,0 +1,11 @@
+.footer {
+  padding: 3rem;
+  background-color: $bgc-color-dark;
+  color: $font-color-light;
+  text-align: center;
+
+  .special-word {
+    color: $border-color;
+    text-transform: uppercase;
+  }
+}

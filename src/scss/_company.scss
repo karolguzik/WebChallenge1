@@ -1,18 +1,10 @@
 .company {
   background-color: $bgc-color-dark;
   padding: $section-padding;
+  color: $font-color-light;
 
-
-  .content-box {
-    height: 40vh;
-    width: $section-width;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-
-  }
-
-  .paragraph {
-    color: $font-color-light;
+  &-content {
+    @include contentSet;
+    height: $content-height;
   }
 }

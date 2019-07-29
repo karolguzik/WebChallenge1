@@ -10,7 +10,9 @@
 }
 
 .heading-secondary {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: lighter;
+  text-align: center;
   letter-spacing: .2rem;
 
   &--light {
@@ -23,7 +25,8 @@
 }
 
 .paragraph {
-  font-size: 1.3rem;
+  padding: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.5;
 
   &--bold {

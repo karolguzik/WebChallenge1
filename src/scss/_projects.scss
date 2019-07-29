@@ -1,0 +1,14 @@
+.projects {
+  padding: $section-padding;
+  color: $font-color-dark;
+
+  &__gallery {
+    @include contentSet;
+    height: 100vh;
+    flex-wrap: wrap;
+  }
+
+  .heading-secondary {
+    text-align: left;
+  }
+}

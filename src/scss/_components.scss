@@ -1,31 +1,45 @@
 .btn {
   display: inline-block;
   margin-top: 2rem;
-  padding: .8rem 1.8rem;
+  padding: 1rem 2rem;
   color: $font-color-dark;
   background: none;
   border: none;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
+
+  &:hover,
+  &:active {
+    @include transition;
+  }
 
   &--white {
     background: $bgc-color-light;
     color: $font-color-dark;
+
+    &:hover {
+      background: lighten($bgc-color-light, 20%);
+    }
   }
 
   &--dark {
     background: $bgc-blue;
     color: $font-color-light;
+
+    &:hover {
+      background: lighten($bgc-blue, 10%);
+    }
   }
+
 }
 
 
 .box {
-  padding: 2rem;
+  margin: 1rem;
 
   &--small {
-    flex-basis: 24%;
+    flex-basis: 25%;
   }
 
   &--medium {
@@ -33,12 +47,29 @@
   }
 
   &--big {
-    flex-basis: 76%;
+    flex-basis: 75%;
   }
 
   &--frame {
-    @include flexCenter;
-    text-align: center;
+    padding: 3rem;
     border: 10px solid $border-color;
+
+    &-center {
+      @include flexCenter;
+    }
   }
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bgc {
+  background: linear-gradient(rgba(0, 0, 0, .7)), url("https://images.unsplash.com/photo-1542889601-399c4f3a8402?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80") no-repeat;
+  background-position: 40% 60%;
+  background-size: cover;
+  width: 100%;
+  height: 40vh;
 }

@@ -1,0 +1,39 @@
+.contact {
+  padding: $section-padding;
+
+  &-content {
+    @include contentSet;
+  }
+
+  &-content-box {
+    @include flexCenter;
+    flex-direction: column;
+  }
+
+  &__address,
+  &__info {
+    list-style: none;
+    line-height: 1.6;
+    font-size: 1.8rem;
+    width: 60%;
+
+    li {
+      color: $font-color-dark;
+    }
+  }
+
+  &__address {
+
+    li:first-child {
+      font-weight: bold;
+    }
+  }
+
+  &__info {
+    margin-top: 1rem;
+  }
+
+  .heading-secondary {
+    text-align: left;
+  }
+}
