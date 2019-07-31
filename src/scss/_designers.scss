@@ -2,7 +2,7 @@
   padding: $section-padding;
   color: $font-color-dark;
 
-  @media only screen and (max-width: 900px) {
+  @include mq900 {
     padding: 3rem;
   }
 
@@ -10,7 +10,7 @@
     @include contentSet;
     height: $content-height;
 
-    @media only screen and (max-width: 900px) {
+    @include mq900 {
       flex-wrap: wrap;
       justify-content: center;
       height: auto;
@@ -20,7 +20,7 @@
       }
     }
 
-    @media only screen and (max-width: 600px) {
+    @include mq600 {
 
       .box {
         flex-basis: 80%;
@@ -31,20 +31,38 @@
         flex-basis: 90%;
       }
     }
+
+    @include mqLandBoth(568px, 320px) {
+      .box {
+        flex-basis: 60%;
+        height: 60vh;
+      }
+
+      .box:nth-child(4) {
+        flex-basis: 70%;
+      }
+    }
   }
 
   &__info {
     @include contentSet;
     margin: $margin-small auto;
 
-    @media only screen and (max-width: 900px) {
+    @include mq900 {
       flex-wrap: wrap;
       justify-content: center;
     }
 
-    @media only screen and (max-width: 600px) {
+    @include mq600 {
       .box {
         flex-basis: 90%;
+      }
+    }
+
+
+    @include mqLandBoth(568px, 320px) {
+      .box {
+        flex-basis: 70%;
       }
     }
   }

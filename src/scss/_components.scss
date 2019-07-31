@@ -38,18 +38,18 @@
 .box {
   margin: 1rem;
 
-  @media only screen and (max-width: 900px) {
+  @include mq900 {
     margin: 2rem;
   }
 
-  @media only screen and (max-width: 600px) {
+  @include mq600 {
     flex-basis: 70%;
   }
 
   &--small {
     flex-basis: 25%;
 
-    @media only screen and (max-width: 900px) {
+    @include mq900 {
       flex-basis: 40%;
     }
   }
@@ -57,7 +57,7 @@
   &--medium {
     flex-basis: 48%;
 
-    @media only screen and (max-width: 900px) {
+    @include mq900 {
       flex-basis: 80%;
     }
   }
@@ -65,7 +65,7 @@
   &--big {
     flex-basis: 75%;
 
-    @media only screen and (max-width: 900px) {
+    @include mq900 {
       flex-basis: 80%;
     }
   }
@@ -93,7 +93,7 @@
   width: 100%;
   height: 40vh;
 
-  @media only screen and (max-width: 700px) {
+  @include mq700 {
     height: 20vh;
   }
 }

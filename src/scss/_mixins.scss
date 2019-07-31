@@ -31,3 +31,54 @@
   width: $width;
   background-color: $border-color;
 }
+
+
+
+@mixin mq600 {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin mq700 {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin mq900 {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin mq1000 {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin mq1200 {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+
+@mixin mqLand($width) {
+  @media screen and (orientation: landscape) and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin mqLandPort($width, $height) {
+  @media screen and (width: $width) and (height: $height) {
+    @content;
+  }
+}
+
+@mixin mqLandBoth($width, $height) {
+  @media screen and (orientation: landscape) and (width: $width) and (height: $height) {
+    @content;
+  }
+}

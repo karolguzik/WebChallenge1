@@ -2,7 +2,7 @@
   padding: $section-padding;
   color: $font-color-dark;
 
-  @media only screen and (max-width: 600px) {
+  @include mq600 {
     padding: 2rem;
   }
 
@@ -11,7 +11,7 @@
     height: 100vh;
     flex-wrap: wrap;
 
-    @media only screen and (max-width: 900px) {
+    @include mq900 {
       height: auto;
       justify-content: center;
 
@@ -20,7 +20,7 @@
       }
     }
 
-    @media only screen and (max-width: 600px) {
+    @include mq600 {
       .box:not(:nth-child(3)) {
         height: 30vh;
         flex-basis: 80%;
@@ -28,6 +28,18 @@
 
       .box:nth-child(3) {
         flex-basis: 100%;
+      }
+    }
+
+
+    @include mqLandBoth(568px, 320px) {
+      .box:not(:nth-child(3)) {
+        height: 50vh;
+        flex-basis: 60%;
+      }
+
+      .box:nth-child(3) {
+        flex-basis: 70%;
       }
     }
   }

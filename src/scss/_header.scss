@@ -15,6 +15,11 @@
   padding: 0 0 3rem 10rem;
   transform: translateY(-50%);
 
+  @include mq600 {
+    padding: 0 0 3rem 0;
+    text-align: center;
+  }
+
   &::after {
     @include afterElement(20%);
   }
